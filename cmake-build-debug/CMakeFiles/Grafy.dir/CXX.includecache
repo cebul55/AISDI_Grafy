@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.cpp
+Graph.h
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.h
+
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.h
+iostream
+-
+vector
+-
+assert.h
+-
+
 /Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/main.cpp
 iostream
 -
+Graph.h
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.h
 

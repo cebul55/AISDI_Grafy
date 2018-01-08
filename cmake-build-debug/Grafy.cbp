@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.cpp">
+			<Option target="Grafy"/>
+		</Unit>
+		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.h">
+			<Option target="Grafy"/>
+		</Unit>
 		<Unit filename="/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/main.cpp">
 			<Option target="Grafy"/>
 		</Unit>

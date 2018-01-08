@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Grafy.dir/main.cpp.o"
+  "CMakeFiles/Grafy.dir/Graph.cpp.o"
   "Grafy.pdb"
   "Grafy"
 )

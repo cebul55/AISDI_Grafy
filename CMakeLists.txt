@@ -3,4 +3,4 @@ project(Grafy)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Grafy main.cpp)
+add_executable(Grafy main.cpp Graph.cpp Graph.h)

@@ -10,14 +10,24 @@
 #include <assert.h>
 
 class Graph{
-    int nodes_;
+    int numberOfNodes_;
+    int numberOfEdges_;
     std::vector <int> *edge_;
     int DFS(int node);
 
 public:
-    Graph(int nodes) {
-        this->nodes_=nodes;
-        edge_ = new std::vector<int> [nodes_];
+    Graph(int numberOfNodes , int numberOfEdges, std::vector<int> *edgesVector){
+        numberOfNodes_ = numberOfNodes;
+        numberOfEdges_ = numberOfEdges;
+        edge_ = new std::vector<int> [numberOfNodes_];
+        for(int i = 0 ; i < numberOfEdges ; i++)
+            addEdge(edgesVector[i][0],edgesVector[i][1]);
+        writeEdges();
+    }
+    Graph(int nodes, int edges) {
+        this->numberOfNodes_=nodes;
+        this->numberOfEdges_=edges;
+        edge_ = new std::vector<int> [numberOfNodes_];
     }
     ~Graph() {
         delete [] edge_;

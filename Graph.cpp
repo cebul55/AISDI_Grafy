@@ -5,13 +5,15 @@
 #include "Graph.h"
 
 void Graph::addEdge(int v, int w) {
-    assert( v<nodes_ || w < nodes_ );
+    /*check if number of node is less than total number of nodes */
+    /*check if v & w are different*/
+    assert( v<numberOfNodes_ && w <numberOfNodes_ && v!=w);
     edge_[v].push_back(w);
     edge_[w].push_back(v);
 }
 
 void Graph::writeEdges() {
-    for(int i = 0 ; i < nodes_ ; i++){
+    for(int i = 0 ; i < numberOfNodes_ ; i++){
         std::cout<<i<<"->";
         for( auto it = edge_[i].begin() ; it != edge_[i].end() ; ++it) {
             std::cout<<" "<<*it;

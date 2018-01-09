@@ -17,18 +17,18 @@ class InputMode{
     std::vector<int> *edgesVector_;
 public:
     InputMode(int argc , char ** argv){
-        assert(argc != 1 ||argc != 2);
+        assert(argc == 1 || argc == 2);
+        int nodes, edges , a , b;
         switch (argc){
             case 1:{
                 std::cout<<"Enter number of nodes and number of edges\n";
-                int nodes, edges , a , b;
+
                 std::cin>>nodes>>edges;
                 numberOfNodes_=nodes;
                 numberOfEdges_=edges;
                 edgesVector_ = new std::vector<int> [numberOfEdges_];
                 for(int i = 0 ; i < numberOfEdges_ ; i++){
                     std::cin>>a>>b;
-                    assert( a<numberOfNodes_ || b < numberOfEdges_ );
                     edgesVector_[i].push_back(a);
                     edgesVector_[i].push_back(b);
                 }
@@ -37,10 +37,14 @@ public:
             case 2:{
                 /*reading text file*/
                 std::string line,fileText;
-                int edges = -1;
+                edges = -1;
                 line = argv[1];
                 std::ifstream inputFile;
+
                 inputFile.open(line);
+                //if(inputFile == NULL )
+                  //  throw std::perror("Error opening file");
+
                 while(!inputFile.eof()){
                     getline(inputFile,line);
                     fileText+=line;
@@ -49,20 +53,32 @@ public:
                 }
                 inputFile.close();
                 /*Adding edges and nodes to class InputMOde */
-                numberOfNodes_=atoi(&fileText[0]);
                 numberOfEdges_=edges;
+                edges=0;
                 edgesVector_ = new std::vector<int> [numberOfEdges_];
-                //starting from second char, because we have number of nodes already
-                edges = 0;
-                for(int i = 2; line[i]!='\0'; i = i+4){
-                    edgesVector_[edges].push_back(atoi(&line[i]));
-                    edgesVector_[edges].push_back(atoi(&line[i+2]));
-                    ++edges;
+                for(int i = 0 ; fileText[i]!='\0' ;){
+                    if(i == 0)
+                        numberOfNodes_=atoi(&fileText[i]);
+                    else{
+                        a=atoi(&fileText[i]);
+
+                        while(fileText[i]!=' ')
+                            i++;
+
+                        b=atoi(&fileText[i]);
+                        edgesVector_[edges].push_back(a);
+                        edgesVector_[edges].push_back(b);
+                        ++edges;
+                    }
+                    while(fileText[i]!='\n'){
+                        ++i;
+                    }
+                    ++i;
                 }
-                for(int i = 0 ; i < numberOfEdges_ ; i++){
+                /*for(int i = 0 ; i < numberOfEdges_ ; i++){
                     std::cout<<edgesVector_[i][0]<<" ";
                     std::cout<<edgesVector_[i][1]<<std::endl;
-                }
+                }*/
                 break;
             }
 
@@ -71,6 +87,15 @@ public:
     }
     ~InputMode(){
         delete [] edgesVector_;
+    }
+    int getNumberOfEdges(){
+        return numberOfEdges_;
+    }
+    int getNumberOfNodes(){
+        return numberOfNodes_;
+    }
+    std::vector<int>* getEdgesVector(){
+        return edgesVector_;
     }
 };
 

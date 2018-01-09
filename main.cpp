@@ -4,6 +4,7 @@
 
 int main(int argc, char ** argv) {
     InputMode i(argc, argv);
+    Graph g(i.getNumberOfNodes(),i.getNumberOfEdges(),i.getEdgesVector());
     /*std::cout << "add graph" << std::endl;
     int n;
     std::cin >> n;

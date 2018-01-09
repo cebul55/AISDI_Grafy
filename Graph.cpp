@@ -22,6 +22,11 @@ void Graph::writeEdges() {
     }
 }
 
-int Graph::DFS(int node) {
-    //todo DFS
+/* DFS */
+void Graph::DFS(int node , bool visited[]) {
+    visited[node]=true;
+    for(std::vector<int>::iterator it = edge_[node].begin(); it != edge_[node].end() ; ++it ){
+        if(!visited[*it])
+            DFS(*it,visited);
+    }
 }

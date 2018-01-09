@@ -42,8 +42,9 @@ public:
                 std::ifstream inputFile;
 
                 inputFile.open(line);
-                //if(inputFile == NULL )
-                  //  throw std::perror("Error opening file");
+                if(!inputFile.is_open() )
+                    throw std::logic_error("Error opening file");
+
 
                 while(!inputFile.eof()){
                     getline(inputFile,line);

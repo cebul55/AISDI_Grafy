@@ -13,8 +13,9 @@ class Graph{
     int numberOfNodes_;
     int numberOfEdges_;
     std::vector <int> *edge_;
-    int DFS(int node);
-
+public:
+    void DFS(int node , bool visited[]);
+//todo sprawdz czy krawedz sie nie powtarza
 public:
     Graph(int numberOfNodes , int numberOfEdges, std::vector<int> *edgesVector){
         numberOfNodes_ = numberOfNodes;

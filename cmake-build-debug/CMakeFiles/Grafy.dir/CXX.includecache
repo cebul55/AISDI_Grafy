@@ -18,9 +18,23 @@ vector
 assert.h
 -
 
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/InputMode.h
+iostream
+-
+fstream
+-
+vector
+-
+assert.h
+-
+string
+-
+
 /Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/main.cpp
 iostream
 -
 Graph.h
 /Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/Graph.h
+InputMode.h
+/Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/InputMode.h
 

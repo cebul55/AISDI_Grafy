@@ -5,5 +5,6 @@ CMakeFiles/Grafy.dir/Graph.cpp.o: ../Graph.cpp
 CMakeFiles/Grafy.dir/Graph.cpp.o: ../Graph.h
 
 CMakeFiles/Grafy.dir/main.cpp.o: ../Graph.h
+CMakeFiles/Grafy.dir/main.cpp.o: ../InputMode.h
 CMakeFiles/Grafy.dir/main.cpp.o: ../main.cpp
 

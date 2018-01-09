@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Graph.h"
+#include "InputMode.h"
 
-int main() {
-    std::cout << "add graph" << std::endl;
+int main(int argc, char ** argv) {
+    InputMode i(argc, argv);
+    /*std::cout << "add graph" << std::endl;
     int n;
     std::cin >> n;
     Graph g(n);
@@ -12,6 +14,6 @@ int main() {
         g.addEdge(a,b);
         --n;
     }
-    g.writeEdges();
+    g.writeEdges();*/
     return 0;
 }

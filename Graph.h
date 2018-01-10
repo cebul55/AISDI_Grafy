@@ -15,7 +15,6 @@ class Graph{
     std::vector <int> *edge_;
 public:
     void DFS(int node , bool visited[]);
-//todo sprawdz czy krawedz sie nie powtarza
 public:
     Graph(int numberOfNodes , int numberOfEdges, std::vector<int> *edgesVector){
         numberOfNodes_ = numberOfNodes;
@@ -23,7 +22,7 @@ public:
         edge_ = new std::vector<int> [numberOfNodes_];
         for(int i = 0 ; i < numberOfEdges ; i++)
             addEdge(edgesVector[i][0],edgesVector[i][1]);
-        writeEdges();
+        //writeEdges();
     }
     Graph(int nodes, int edges) {
         this->numberOfNodes_=nodes;
@@ -35,6 +34,7 @@ public:
     }
     void addEdge(int v, int w);
     void writeEdges();
+    void findBridges();
 };
 
 

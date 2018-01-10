@@ -30,3 +30,30 @@ void Graph::DFS(int node , bool visited[]) {
             DFS(*it,visited);
     }
 }
+/*algorytm wybiera każdą krawędź po kolei w ten sposób że z grafu bierze połączenie gdzie pierwsza liczba jest mniejsza od drugiej*/
+/*nastepnie w tablicy odwiedzonych zaznacza te dwa wierzchołki jako odwiedzone i wywołuje algorytm DFS dla najmniejszego nieodwiedzonego wierzch*/
+/*jeżeli DFS odwiedzi wszystkie krawędzie to znaczy że wybrana krawędź nie jest mostem, w.p.p. jest mostem */
+void Graph::findBridges() {
+    bool visited[numberOfNodes_];
+    int node1, node2 , tmp;
+    for(int i = 0 ; i<numberOfNodes_ ; i++){
+        for(std::vector<int>::iterator it = edge_[i].begin() ; it != edge_[i].end() ; ++it) {
+            if (i < *it) {
+                node1 = i;
+                node2 = *it;
+                for (int j = 0; j < numberOfNodes_; j++) { visited[j] = false; }
+                visited[node1] = visited[node2] = true;
+                tmp = 0;
+                while (visited[tmp] == true) { ++tmp; }
+                DFS(tmp, visited);
+                for (int k = 0; k < numberOfNodes_; k++) {
+                    if (visited[k] == false) {
+                        std::cout << node1 << " " << node2 << std::endl;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    std::cout<<std::endl;
+}

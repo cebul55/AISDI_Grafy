@@ -7,7 +7,7 @@
 void Graph::addEdge(int v, int w) {
     /*check if number of node is less than total number of nodes */
     /*check if v & w are different*/
-    assert( v<numberOfNodes_ && w <numberOfNodes_ && v!=w);
+    assert( numberOfNodes_!=0 && v<numberOfNodes_ && w <numberOfNodes_ && v!=w);
     edge_[v].push_back(w);
     edge_[w].push_back(v);
 }

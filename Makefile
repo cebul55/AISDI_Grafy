@@ -1,5 +1,5 @@
-a.out: main.o Graph.o
-	g++ main.o Graph.o
+Graph: main.o Graph.o
+	g++ main.o Graph.o -o Graph
 
 main.o: main.cpp InputMode.h
 	g++ -c -Wall main.cpp 

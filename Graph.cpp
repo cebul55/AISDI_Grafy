@@ -15,7 +15,7 @@ void Graph::addEdge(int v, int w) {
 void Graph::writeEdges() {
     for(int i = 0 ; i < numberOfNodes_ ; i++){
         std::cout<<i<<"->";
-        for( auto it = edge_[i].begin() ; it != edge_[i].end() ; ++it) {
+        for( std::vector<int>::iterator  it = edge_[i].begin() ; it != edge_[i].end() ; ++it) {
             std::cout<<" "<<*it;
         }
         std::cout<<std::endl;

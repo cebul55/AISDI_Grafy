@@ -1,4 +1,4 @@
-//
+c//
 // Created by Bartosz Cybulski on 09.01.2018.
 //
 
@@ -6,6 +6,7 @@
 #define GRAFY_INPUTMODE_H
 
 #include <iostream>
+#include <stdexcept>
 #include <fstream>
 #include <vector>
 #include <assert.h>

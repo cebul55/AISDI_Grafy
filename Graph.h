@@ -24,11 +24,11 @@ public:
             addEdge(edgesVector[i][0],edgesVector[i][1]);
         //writeEdges();
     }
-    Graph(int nodes, int edges) {
+    /*Graph(int nodes, int edges) {
         this->numberOfNodes_=nodes;
         this->numberOfEdges_=edges;
         edge_ = new std::vector<int> [numberOfNodes_];
-    }
+    }*/
     ~Graph() {
         delete [] edge_;
     }

@@ -21,6 +21,8 @@ assert.h
 /Users/bartoszcybulski/Documents/Informatyka WEITI Materiały /Semestr_3/Algorytmy i Struktury Danych/Lab/Grafy/InputMode.h
 iostream
 -
+stdexcept
+-
 fstream
 -
 vector
